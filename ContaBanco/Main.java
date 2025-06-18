@@ -22,7 +22,7 @@ public class Main {
     private final static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args){
         while (true) {
-            System.out.println("Ben vindo ao cadastro de usuários, selecione a operação desejada");
+            System.out.println("Bem vindo ao cadastro de usuários, selecione a operação desejada");
             System.out.println("1 - Cadastrar");
             System.out.println("2 - Atualizar");
             System.out.println("3 - Excluir");
@@ -107,7 +107,7 @@ public class Main {
 
     public static UserModel validateInputs(final long id, final String name, 
     final String email, final LocalDate birthday){
-        var user = new UserModel(0, name, email, birthday);
+        var user = new UserModel(id, name, email, birthday);
         try{
             verifyModel(user);
             return user; 
